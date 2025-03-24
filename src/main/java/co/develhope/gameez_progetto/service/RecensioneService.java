@@ -2,6 +2,7 @@ package co.develhope.gameez_progetto.service;
 
 import co.develhope.gameez_progetto.entity.Recensione;
 import co.develhope.gameez_progetto.repository.RecensioneRepository;
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,7 @@ import java.util.Optional;
 public class RecensioneService {
     @Autowired
     private RecensioneRepository recensioneRepository;
+
 
     public Recensione creaRecensione(Recensione recensione){
         return recensioneRepository.save(recensione);

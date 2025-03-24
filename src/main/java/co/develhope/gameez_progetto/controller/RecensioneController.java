@@ -1,7 +1,6 @@
 package co.develhope.gameez_progetto.controller;
 
 import co.develhope.gameez_progetto.entity.Recensione;
-import co.develhope.gameez_progetto.entity.User;
 import co.develhope.gameez_progetto.service.RecensioneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +14,7 @@ import java.util.Optional;
 public class RecensioneController {
     @Autowired
     private RecensioneService recensioneService;
+
 
     @PostMapping("/create-recensione")
     public ResponseEntity<Recensione> createRecensione(@RequestBody Recensione recensione) {

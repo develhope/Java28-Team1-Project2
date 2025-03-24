@@ -27,7 +27,7 @@ public class ProdottoController {
         return ResponseEntity.ok(prodotti);
     }
 
-    @GetMapping("/cerca-per-id/{id}")
+    @GetMapping("/find-by-id/{id}")
     public ResponseEntity<Optional<Prodotto>> cercaPerId(@PathVariable Long id){
         Optional<Prodotto> prodottoOptional = prodottoService.cercaPerId(id);
         if (prodottoOptional.isPresent()){
